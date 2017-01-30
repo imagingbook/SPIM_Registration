@@ -3,17 +3,24 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>sc.fiji</groupId>
-		<artifactId>pom-fiji</artifactId>
-		<version>24.3.0</version>
+		<groupId>org.scijava</groupId>
+		<artifactId>pom-scijava</artifactId>
+		<version>13.0.0</version>
 		<relativePath />
 	</parent>
 
+	<groupId>sc.fiji</groupId>
 	<artifactId>SPIM_Registration</artifactId>
 	<version>5.0.9-SNAPSHOT</version>
 
 	<name>SPIM Registration</name>
 	<description>Software for the reconstruction of multi-view microscopic acquisitions like Selective Plane Illumination Microscopy (SPIM) Data.</description>
+	<url>http://imagej.net/SPIM_Registration</url>
+	<inceptionYear>2007</inceptionYear>
+	<organization>
+		<name>Fiji</name>
+		<url>http://fiji.sc/</url>
+	</organization>
 	<licenses>
 		<license>
 			<name>GNU Public License v2</name>
@@ -95,6 +102,13 @@
 		</contributor>
 	</contributors>
 
+	<mailingLists>
+		<mailingList>
+			<name>ImageJ Forum</name>
+			<archive>http://forum.imagej.net/</archive>
+		</mailingList>
+	</mailingLists>
+
 	<scm>
 		<connection>scm:git:git://github.com/fiji/SPIM_Registration</connection>
 		<developerConnection>scm:git:git@github.com:fiji/SPIM_Registration</developerConnection>
@@ -111,11 +125,11 @@
 	</ciManagement>
 
 	<properties>
-		<scijava.jvm.version>1.8</scijava.jvm.version>
-		<pom-bigdataviewer.version>4.0.1</pom-bigdataviewer.version>
 		<license.licenseName>gpl_v2</license.licenseName>
 		<license.copyrightOwners>Fiji development team</license.copyrightOwners>
 		<license.projectName>Fiji distribution of ImageJ for the life sciences.</license.projectName>
+
+		<legacy-imglib1.version>1.1.6</legacy-imglib1.version>
 	</properties>
 
 	<repositories>
@@ -126,17 +140,6 @@
 		</repository>
 	</repositories>
 
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>sc.fiji</groupId>
-				<artifactId>pom-bigdataviewer</artifactId>
-				<version>${pom-bigdataviewer.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
 	<dependencies>
 		<!-- BigDataViewer dependencies -->
 		<dependency>
@@ -214,12 +217,12 @@
 			</exclusions>
 		</dependency>
 		<dependency>
-			<groupId>ome</groupId>
+			<groupId>org.openmicroscopy</groupId>
 			<artifactId>ome-xml</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>ome</groupId>
-			<artifactId>formats-common</artifactId>
+			<groupId>org.openmicroscopy</groupId>
+			<artifactId>ome-common</artifactId>
 		</dependency>
 
 		<!-- Third party dependencies -->
@@ -247,7 +250,5 @@
 			<groupId>org.jfree</groupId>
 			<artifactId>jfreechart</artifactId>
 		</dependency>
-
-		<!-- Java 3D dependencies -->
 	</dependencies>
 </project>
