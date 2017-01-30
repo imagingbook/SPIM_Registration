@@ -113,6 +113,9 @@
 	<properties>
 		<scijava.jvm.version>1.8</scijava.jvm.version>
 		<pom-bigdataviewer.version>4.0.1</pom-bigdataviewer.version>
+		<license.licenseName>gpl_v2</license.licenseName>
+		<license.copyrightOwners>Fiji development team</license.copyrightOwners>
+		<license.projectName>Fiji distribution of ImageJ for the life sciences.</license.projectName>
 	</properties>
 
 	<repositories>
